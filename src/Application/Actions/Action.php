@@ -145,9 +145,9 @@ abstract class Action
             ->withStatus(200);
     }
 
-    protected function respondNotFound()
+    protected function respondNotFound($message = "")
     {
-        $this->response->getBody()->write("0");
+        $this->response->getBody()->write($message);
 
         return $this->response
             ->withStatus(404);

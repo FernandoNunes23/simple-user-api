@@ -1,4 +1,4 @@
-# Simple-Bank-Api
+# Simple-User-Api
 ## Pré-Requisitos
 - Docker Compose 1.27.4 ou mais recente
 - Docker 19.03.13 ou mais recente
@@ -10,7 +10,7 @@ cd [my-app-name]
 docker-compose up -d
 ```
 
-Após isso, abra `http://localhost:8080` no seu browser.
+Após isso, abra `http://localhost:8090` no seu browser.
 
 Digite este comando para rodar a suite de testes 
 

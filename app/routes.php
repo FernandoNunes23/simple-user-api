@@ -1,11 +1,12 @@
 <?php
 declare(strict_types=1);
 
-use App\Application\Actions\Account\AccountEventAction;
-use App\Application\Actions\Account\AccountGetBalanceAction;
-use App\Application\Actions\Reset\ResetAction;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
+use App\Application\Actions\User\UserPostAction;
+use \App\Application\Actions\User\UserGetAllAction;
+use \App\Application\Actions\User\UserDeleteAction;
+use \App\Application\Actions\User\UserPutAction;
 use Slim\App;
 
 return function (App $app) {
@@ -14,9 +15,8 @@ return function (App $app) {
         return $response;
     });
 
-    $app->get('/balance', AccountGetBalanceAction::class);
-
-    $app->post('/event', AccountEventAction::class);
-
-    $app->post('/reset', ResetAction::class);
+	$app->post('/user', UserPostAction::class);
+	$app->get('/user', UserGetAllAction::class);
+	$app->delete('/user', UserDeleteAction::class);
+	$app->put('/user/{id}', UserPutAction::class);
 };

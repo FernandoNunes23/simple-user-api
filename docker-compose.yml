@@ -16,3 +16,9 @@ services:
         volumes:
             - .:/var/www
             - logs:/var/www/logs
+    composer:
+        restart: 'no'
+        image: composer/composer
+        command: install --ignore-platform-reqs
+        volumes:
+            - .:/app
