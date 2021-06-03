@@ -24,8 +24,8 @@ class UserPutAction extends UserAction
 			$user->setName($data["name"]);
 		}
 
-		if (!empty($data["second_email"])) {
-			$user->setSecondName($data["second_email"]);
+		if (!empty($data["second_name"])) {
+			$user->setSecondName($data["second_name"]);
 		}
 
 		if (!empty($data["email"])) {
